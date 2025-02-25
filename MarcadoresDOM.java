@@ -8,7 +8,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 
-public class Marcadores {
+public class MarcadoresDOM {
 	
 	
 	public static void main(String[] args) {
@@ -56,14 +56,11 @@ public class Marcadores {
             transformer.transform(source, result);
             System.out.println("Archivo 'analisis_dom.xml' generado correctamente.");
 
-        } catch (ParserConfigurationException e) {
-            System.err.println("Error de configuración del parser: " + e.getMessage());
-        } catch (IOException e) {
-            System.err.println("Error de entrada/salida: " + e.getMessage());
         } catch (Exception e) {
-            System.err.println("Error inesperado: " + e.getMessage());
-        }
+            System.err.println("Error de configuración");
+        
     }
+	}
 
     // Método para mostrar la jerarquía
     private static void printNode(Node node, int level) {
